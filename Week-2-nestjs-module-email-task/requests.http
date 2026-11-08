@@ -1,0 +1,23 @@
+### 1. Provider mặc định (mock)
+POST http://localhost:3000/api/v1/mail/send
+Content-Type: application/json
+
+{ "to": "a@test.com", "subject": "Hello", "content": "<h1>Hi</h1>" }
+
+### 2. SMTP (cần điền SMTP_USER/SMTP_PASS trong .env)
+POST http://localhost:3000/api/v1/mail/send
+Content-Type: application/json
+
+{ "to": "a@test.com", "subject": "Hello", "content": "Test SMTP", "provider": "smtp" }
+
+### 3. Lỗi validation
+POST http://localhost:3000/api/v1/mail/send
+Content-Type: application/json
+
+{ "to": "invalid-email-format", "subject": "" }
+
+### 4. Provider không hợp lệ
+POST http://localhost:3000/api/v1/mail/send
+Content-Type: application/json
+
+{ "to": "a@test.com", "subject": "x", "content": "y", "provider": "sendgrid" }
