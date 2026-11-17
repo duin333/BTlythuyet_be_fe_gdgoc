@@ -5,6 +5,8 @@ import Schedule from './components/Schedule'
 import Trainers from './components/Trainers'
 import Pricing from './components/Pricing'
 import Faq from './components/Faq'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default function App() {
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
@@ -22,6 +24,8 @@ export default function App() {
       <Trainers />
       <Pricing />
       <Faq />
+      <Contact />
+      <Footer />
     </div>
   )
 }
