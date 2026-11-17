@@ -1,3 +1,16 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+@theme {
+  --animate-fade: fade 0.2s ease-out;
+  --animate-pop: pop 0.25s ease-out;
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(12px) scale(0.96); }
+    to { opacity: 1; transform: none; }
+  }
+}

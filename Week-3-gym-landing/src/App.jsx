@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Schedule from './components/Schedule'
+import Trainers from './components/Trainers'
 
 export default function App() {
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
@@ -16,6 +17,7 @@ export default function App() {
       <Navbar dark={dark} setDark={setDark} />
       <Hero />
       <Schedule />
+      <Trainers />
       {/* Bước sau: Trainers + Modal, Pricing, Faq, Contact */}
     </div>
   )
