@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Schedule from './components/Schedule'
 import Trainers from './components/Trainers'
+import Pricing from './components/Pricing'
+import Faq from './components/Faq'
 
 export default function App() {
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
@@ -18,7 +20,8 @@ export default function App() {
       <Hero />
       <Schedule />
       <Trainers />
-      {/* Bước sau: Trainers + Modal, Pricing, Faq, Contact */}
+      <Pricing />
+      <Faq />
     </div>
   )
 }
